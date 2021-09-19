@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![](src/main/resources/static/assets/images/OnlyFit.png) :gem:
+=======
+![](src/main/resources/static/assets/images/OnlyFit-Logo.png)
+>>>>>>> 53352fac6a0d394f37e0b2ff397c6c423775b01d
 
 ## Informacion General
 - Curso: Innovación y Emprendimiento con TI
