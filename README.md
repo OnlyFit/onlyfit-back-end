@@ -1,4 +1,4 @@
-![](src/main/resources/static/assets/images/logo.png) :gem:
+![](src/main/resources/static/assets/images/OnlyFit-Logo.png) :gem:
 
 ## Informacion General
 - Curso: Innovación y Emprendimiento con TI
@@ -36,9 +36,6 @@ Nuestra propuesta de valor es ofrecer una plataforma que se adapte a la necesida
 
 ## *Integracion continua en CircleCi* :white_check_mark:
 [![]()]()
-
-## Reporte de analisis *Codacy* :white_check_mark:
-[![Codacy Badge]()]()
 
 ## Descripcion de la Metodologia :unlock:
 
