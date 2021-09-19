@@ -2,7 +2,7 @@ package ieti.project.onlyfit.controller.auth;
 
 import ieti.project.onlyfit.exception.InvalidCredentialsException;
 import ieti.project.onlyfit.repository.document.User;
-import ieti.project.onlyfit.service.UserService;
+import ieti.project.onlyfit.service.user.UserService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package ieti.project.onlyfit.controller.user;
 
 import ieti.project.onlyfit.repository.document.User;
-import ieti.project.onlyfit.service.UserService;
+import ieti.project.onlyfit.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -52,6 +52,12 @@ public class UserController
     public ResponseEntity<Boolean> delete( @PathVariable String id )
     {
         return ResponseEntity.ok( userService.deleteById( id ) );
+    }
+
+    @GetMapping("/coaches")
+    public List<User> allCoaches()
+    {
+        return userService.allCoaches();
     }
 
 }

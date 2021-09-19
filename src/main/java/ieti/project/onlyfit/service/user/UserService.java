@@ -1,4 +1,4 @@
-package ieti.project.onlyfit.service;
+package ieti.project.onlyfit.service.user;
 
 import ieti.project.onlyfit.controller.user.UserDto;
 import ieti.project.onlyfit.exception.UserNotFoundException;
@@ -21,4 +21,6 @@ public interface UserService
     boolean deleteById( String id );
 
     User update( UserDto userDto, String id );
+
+    List<User> allCoaches();
 }
