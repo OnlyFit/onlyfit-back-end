@@ -1,13 +1,15 @@
-package ieti.project.onlyfit.service;
+package ieti.project.onlyfit.service.user;
 
 import ieti.project.onlyfit.controller.user.UserDto;
 import ieti.project.onlyfit.exception.UserAlreadyCreatedException;
 import ieti.project.onlyfit.exception.UserNotFoundException;
 import ieti.project.onlyfit.repository.UserRepository;
+import ieti.project.onlyfit.repository.document.RoleEnum;
 import ieti.project.onlyfit.repository.document.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -90,5 +92,18 @@ public class UserServiceMongoDB
             return user;
         }
         return null;
+    }
+
+    @Override
+    public List<User> allCoaches()
+    {
+        List<User> allUsers = userRepository.findAll();
+        List<User> allCoaches = new ArrayList<>();
+        for(User user: allUsers){
+            if(user.getRoles().get(0) == RoleEnum.valueOf("COACH")){
+                allCoaches.add(user);
+            }
+        }
+        return allCoaches;
     }
 }
