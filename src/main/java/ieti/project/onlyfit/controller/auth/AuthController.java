@@ -8,10 +8,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -19,7 +16,8 @@ import java.util.Date;
 import static ieti.project.onlyfit.utils.Constants.*;
 
 @RestController
-@RequestMapping( "v1/auth" )
+@CrossOrigin(origins = "*")
+@RequestMapping( "/v1/auth" )
 public class AuthController
 {
 

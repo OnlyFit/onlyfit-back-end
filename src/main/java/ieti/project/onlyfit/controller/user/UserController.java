@@ -10,6 +10,7 @@ import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping( "/v1/user" )
 public class UserController
 {
