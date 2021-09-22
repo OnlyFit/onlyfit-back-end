@@ -95,15 +95,17 @@ public class UserServiceMongoDB
     }
 
     @Override
-    public List<User> allCoaches()
+    public List<User> allUsers()
     {
         List<User> allUsers = userRepository.findAll();
         List<User> allCoaches = new ArrayList<>();
         for(User user: allUsers){
-            if(user.getRoles().get(0) == RoleEnum.valueOf("COACH")){
+            if(user.getRoles().get(0) == RoleEnum.valueOf("USER")){
                 allCoaches.add(user);
             }
         }
         return allCoaches;
     }
+
+
 }

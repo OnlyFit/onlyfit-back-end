@@ -3,6 +3,7 @@ package ieti.project.onlyfit.service.user;
 import ieti.project.onlyfit.controller.user.UserDto;
 import ieti.project.onlyfit.exception.UserNotFoundException;
 import ieti.project.onlyfit.repository.document.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -22,5 +23,5 @@ public interface UserService
 
     User update( UserDto userDto, String id );
 
-    List<User> allCoaches();
+    List<User> allUsers();
 }

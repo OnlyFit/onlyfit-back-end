@@ -55,10 +55,9 @@ public class UserController
         return ResponseEntity.ok( userService.deleteById( id ) );
     }
 
-    @GetMapping("/coaches")
+    @GetMapping("/users")
     public List<User> allCoaches()
     {
-        return userService.allCoaches();
+        return userService.allUsers();
     }
-
 }
