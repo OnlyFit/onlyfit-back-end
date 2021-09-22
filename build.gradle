@@ -1,5 +1,6 @@
 plugins {
 	id 'org.springframework.boot' version '2.5.4'
+	id "com.heroku.sdk.heroku-gradle" version "2.0.0"
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
@@ -22,6 +23,13 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 }
 
-test {
-	useJUnitPlatform()
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+
+gradle.taskGraph.whenReady {
+	taskGraph ->
+		if (taskGraph.hasTask(stage)) {
+			test.enabled = false
+		}
 }

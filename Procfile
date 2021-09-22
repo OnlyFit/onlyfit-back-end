@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* ieti.project.onlyfit.OnlyfitApplication
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/onlyfit-0.0.1-SNAPSHOT.jar
