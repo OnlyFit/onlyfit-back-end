@@ -28,8 +28,8 @@ public class RoutineController {
     }
 
     @GetMapping
-    public List<Routine> all(){
-        return routineService.all();
+    public ResponseEntity<?> all(){
+        return ResponseEntity.ok(routineService.all());
     }
 
     /* @GetMapping("/{email}")
