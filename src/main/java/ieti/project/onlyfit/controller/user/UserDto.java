@@ -12,6 +12,8 @@ public class UserDto
 
     String rol;
 
+    String difficult;
+
     public UserDto()
     {
     }
@@ -37,4 +39,12 @@ public class UserDto
     }
 
     public String getRol() { return rol; }
+
+    public String getDifficult() {
+        return difficult;
+    }
+
+    public void setDifficult(String difficult) {
+        this.difficult = difficult;
+    }
 }

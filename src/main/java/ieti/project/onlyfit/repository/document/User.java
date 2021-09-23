@@ -30,6 +30,8 @@ public class User
 
     Date createdAt;
 
+    DifficultEnum difficult;
+
     public User()
     {
     }
@@ -43,6 +45,8 @@ public class User
         createdAt = new Date();
         roles = new ArrayList<>( Collections.singleton( RoleEnum.valueOf(userDto.getRol())) );
         passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
+        difficult = DifficultEnum.valueOf(userDto.getDifficult());
+
     }
 
     public String getId()
@@ -80,7 +84,15 @@ public class User
         return roles;
     }
 
-    public void update( UserDto userDto )
+    public DifficultEnum getDifficult() {
+        return difficult;
+    }
+
+    public void setDifficult(DifficultEnum difficult) {
+        this.difficult = difficult;
+    }
+
+    public void update(UserDto userDto )
     {
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
@@ -90,6 +102,7 @@ public class User
             this.passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
         }
     }
+
 
 
 }

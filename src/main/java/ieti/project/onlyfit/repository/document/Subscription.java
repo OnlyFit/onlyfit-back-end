@@ -1,8 +1,6 @@
 package ieti.project.onlyfit.repository.document;
 
 import ieti.project.onlyfit.controller.subscription.SubscriptionDto;
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
