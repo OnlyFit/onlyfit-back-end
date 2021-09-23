@@ -5,6 +5,7 @@ import ieti.project.onlyfit.exception.UserNotFoundException;
 import ieti.project.onlyfit.repository.document.User;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface UserService
@@ -15,6 +16,9 @@ public interface UserService
         throws UserNotFoundException;
 
     User findByEmail( String email )
+        throws UserNotFoundException;
+
+    ArrayList<User> findByName (String name )
         throws UserNotFoundException;
 
     List<User> all();

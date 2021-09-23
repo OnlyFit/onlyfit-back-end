@@ -63,6 +63,26 @@ public class UserServiceMongoDB
             throw new UserNotFoundException();
         }
     }
+    @Override
+    public ArrayList<User> findByName( String name )
+            throws UserNotFoundException
+    {
+        List<User> listUser = userRepository.findAll();
+        ArrayList<User> sameNames = new ArrayList<>();
+        for(User user: listUser ){
+            if(user.getName().toLowerCase().contains(name.toLowerCase())|| user.getLastName().toLowerCase().contains(name.toLowerCase())) {
+                sameNames.add(user);
+            }
+        }
+        if ( sameNames.size()>0 )
+        {
+            return sameNames;
+        }
+        else
+        {
+            throw new UserNotFoundException();
+        }
+    }
 
     @Override
     public List<User> all()
