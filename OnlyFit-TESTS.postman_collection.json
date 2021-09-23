@@ -143,12 +143,12 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTQ2N2E2NTRkYjM5MjA5MGMxOWYxMGMiLCJhZGFfcm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNjMyNDM2MzAxLCJleHAiOjE2MzI1MjI3MDF9.tosZk2WohrufbQ7-ygJXo70BAXCF8Ovy_5RKjVp6_JU",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c5847d2f71f2b38ad54c2",
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614cb452a4135d4c43334c13",
 							"protocol": "https",
 							"host": [
 								"onlyfit-backend-staging",
@@ -158,7 +158,7 @@
 							"path": [
 								"v1",
 								"user",
-								"614c5847d2f71f2b38ad54c2"
+								"614cb452a4135d4c43334c13"
 							]
 						}
 					},
@@ -266,7 +266,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"testRoutine\",\r\n    \"description\":\"test routine\",\r\n    \"purpose\":\"test purpouse\",\r\n    \"emailCoach\":\"testcoach@mail.com\"\r\n}",
+							"raw": "{\r\n    \"name\":\"testRoutine1\",\r\n    \"description\":\"test routine1\",\r\n    \"purpose\":\"test purpouse1\",\r\n    \"emailCoach\":\"testcoach@mail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -310,7 +310,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/614ccb7d7126c93f23ac8ea2",
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/614d00c1d5d4434d131cef38",
 							"protocol": "https",
 							"host": [
 								"onlyfit-backend-staging",
@@ -320,7 +320,7 @@
 							"path": [
 								"v1",
 								"routine",
-								"614ccb7d7126c93f23ac8ea2"
+								"614d00c1d5d4434d131cef38"
 							]
 						}
 					},
@@ -338,7 +338,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/614ccb7d7126c93f23ac8ea2",
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/614d00c1d5d4434d131cef38",
 							"protocol": "https",
 							"host": [
 								"onlyfit-backend-staging",
@@ -348,7 +348,7 @@
 							"path": [
 								"v1",
 								"routine",
-								"614ccb7d7126c93f23ac8ea2"
+								"614d00c1d5d4434d131cef38"
 							]
 						}
 					},
@@ -399,7 +399,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"testpostman@mail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
