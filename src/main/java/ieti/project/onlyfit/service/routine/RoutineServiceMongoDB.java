@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ieti.project.onlyfit.controller.routine.RoutineDto;
-import ieti.project.onlyfit.exception.RoutinesNotFoundExeption;
+/* import ieti.project.onlyfit.exception.RoutinesNotFoundExeption; */
 import ieti.project.onlyfit.repository.RoutineRepository;
 import ieti.project.onlyfit.repository.document.Routine;
 
