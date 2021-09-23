@@ -51,7 +51,7 @@ public class RoutineServiceMongoDB implements RoutineService{
         return null;
     }
 
-    @Override
+    /* @Override
     public List<Routine> findRoutineByCoachEmail(String email) {
         List<Routine> listRoutine = routineRepository.findByCoachEmail(email);
         if(!listRoutine.isEmpty()){
@@ -60,6 +60,6 @@ public class RoutineServiceMongoDB implements RoutineService{
         else{
             throw new RoutinesNotFoundExeption();
         }
-    }
+    } */
     
 }

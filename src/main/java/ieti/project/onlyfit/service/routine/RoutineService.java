@@ -11,6 +11,6 @@ public interface RoutineService {
     List<Routine> all();
     boolean deleteById(String id);
     Routine update(RoutineDto routineDto, String id);
-    List<Routine> findRoutineByCoachEmail(String email);
+    /* List<Routine> findRoutineByCoachEmail(String email); */
     
 }
