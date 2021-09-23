@@ -31,10 +31,10 @@ public class RoutineController {
         return routineService.all();
     }
 
-    @GetMapping("/{email}")
+    /* @GetMapping("/{email}")
     public List<Routine> getRoutineByCoachEmail(@PathVariable String email){
         return routineService.findRoutineByCoachEmail(email);
-    }
+    } */
 
     @PostMapping
     public ResponseEntity<Routine> create(@RequestBody RoutineDto routineDto){
