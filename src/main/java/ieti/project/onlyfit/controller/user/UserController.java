@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.security.RolesAllowed;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -60,4 +61,11 @@ public class UserController
     {
         return userService.allUsers();
     }
+
+    @GetMapping("findByName/{name}")
+    public ArrayList<User> findByName(@PathVariable String name) {
+        return userService.findByName(name);
+    }
 }
+
+
