@@ -38,7 +38,7 @@ public class RoutineController {
     } */
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody RoutineDto routineDto){
+    public ResponseEntity<Routine> create(@RequestBody RoutineDto routineDto){
         return new ResponseEntity<>( routineService.create(routineDto),HttpStatus.ACCEPTED);
     }
 
