@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ieti.project.onlyfit.repository.document.Routine;
 import ieti.project.onlyfit.service.routine.RoutineService;
+import org.springframework.http.HttpStatus;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -37,8 +38,8 @@ public class RoutineController {
     } */
 
     @PostMapping
-    public ResponseEntity<Routine> create(@RequestBody RoutineDto routineDto){
-        return ResponseEntity.ok( routineService.create(routineDto));
+    public ResponseEntity<?> create(@RequestBody RoutineDto routineDto){
+        return new ResponseEntity<>( routineService.create(routineDto),HttpStatus.ACCEPTED);
     }
 
     @PutMapping( "/{id}")

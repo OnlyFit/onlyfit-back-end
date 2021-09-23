@@ -22,8 +22,7 @@ public class RoutineServiceMongoDB implements RoutineService{
     @Override
     public Routine create(RoutineDto routineDto) {
         Routine routine = new Routine(routineDto);
-        routineRepository.save(routine);
-        return routine;
+        return routineRepository.save(routine);
     }
 
     @Override
