@@ -5,6 +5,7 @@ public class RoutineDto {
     String description;
     String purpose;
     String emailCoach;
+    boolean payment;
 
     public RoutineDto(){
 
@@ -25,5 +26,8 @@ public class RoutineDto {
     public String getEmailCoach(){
         return emailCoach;
     }
-    
+
+    public boolean getPayment(){
+        return payment;
+    }
 }

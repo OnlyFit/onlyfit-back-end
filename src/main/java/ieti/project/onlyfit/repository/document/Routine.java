@@ -2,7 +2,6 @@ package ieti.project.onlyfit.repository.document;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import ieti.project.onlyfit.controller.routine.RoutineDto;
 
 @Document
@@ -18,6 +17,8 @@ public class Routine {
 
     String emailCoach;
 
+    boolean payment;
+
     public Routine(){
 
     }
@@ -27,6 +28,7 @@ public class Routine {
         description = routineDto.getDescription();
         purpose = routineDto.getPurpose();
         emailCoach = routineDto.getEmailCoach();
+        payment = routineDto.getPayment();
     }
 
     public void update(RoutineDto routineDto){
@@ -34,5 +36,6 @@ public class Routine {
         description = routineDto.getDescription();
         purpose = routineDto.getPurpose();
         emailCoach = routineDto.getEmailCoach();
+        payment = routineDto.getPayment();
     }
 }
