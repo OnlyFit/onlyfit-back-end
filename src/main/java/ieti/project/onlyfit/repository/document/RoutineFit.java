@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import ieti.project.onlyfit.controller.routine.RoutineDto;
 
 @Document
-public class Routine {
+public class RoutineFit {
     @Id
     String id;
 
@@ -19,11 +19,35 @@ public class Routine {
 
     boolean payment;
 
-    public Routine(){
+    public boolean getPayment(){
+        return payment;
+    }
+
+    public String getEmailCoach(){
+        return emailCoach;
+    }
+
+    public String getPurpose(){
+        return purpose;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public String getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public RoutineFit(){
 
     }
 
-    public Routine(RoutineDto routineDto){
+    public RoutineFit(RoutineDto routineDto){
         name = routineDto.getName();
         description = routineDto.getDescription();
         purpose = routineDto.getPurpose();
