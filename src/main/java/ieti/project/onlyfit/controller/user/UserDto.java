@@ -1,5 +1,7 @@
 package ieti.project.onlyfit.controller.user;
 
+import ieti.project.onlyfit.repository.document.Information;
+
 public class UserDto
 {
     String name;
@@ -11,6 +13,8 @@ public class UserDto
     String password;
 
     String rol;
+
+    Information information;
 
     public UserDto()
     {
@@ -37,4 +41,8 @@ public class UserDto
     }
 
     public String getRol() { return rol; }
+
+    public Information getInformation() {return information;}
+
+    public void setInformation(Information information) {this.information = information;}
 }

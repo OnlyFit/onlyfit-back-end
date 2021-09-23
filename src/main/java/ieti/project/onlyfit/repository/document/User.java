@@ -30,10 +30,11 @@ public class User
 
     Date createdAt;
 
+    Information information;
+
     public User()
     {
     }
-
 
     public User( UserDto userDto )
     {
@@ -43,6 +44,7 @@ public class User
         createdAt = new Date();
         roles = new ArrayList<>( Collections.singleton( RoleEnum.valueOf(userDto.getRol())) );
         passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
+        information=userDto.getInformation();
     }
 
     public String getId()
@@ -75,22 +77,25 @@ public class User
         return passwordHash;
     }
 
-    public List<RoleEnum> getRoles()
-    {
+    public List<RoleEnum> getRoles() {
         return roles;
     }
 
-    public void update( UserDto userDto )
-    {
+    public Information getInformation() {
+        return information;
+    }
+
+    public void setInformation(Information information) {
+        this.information = information;
+    }
+
+    public void update(UserDto userDto ) {
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
         this.email = userDto.getEmail();
-        if ( userDto.getPassword() != null )
-        {
+        if ( userDto.getPassword() != null ) {
             this.passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
         }
     }
-
-
 }
 
