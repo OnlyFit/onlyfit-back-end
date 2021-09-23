@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "a789333d-918d-40c3-ab58-dbb15a545980",
+		"name": "OnlyFit-TESTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "GET Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c0880a9f50a7b600fc934",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user",
+								"614c0880a9f50a7b600fc934"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TestPostman\",\r\n    \"lastName\":\"01\",\r\n    \"email\":\"testpostman@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"rol\":\"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TestPostman02\",\r\n    \"lastName\":\"02\",\r\n    \"email\":\"testpostman@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"rol\":\"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c0880a9f50a7b600fc934",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user",
+								"614c0880a9f50a7b600fc934"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c0880a9f50a7b600fc934",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user",
+								"614c0880a9f50a7b600fc934"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Coaches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/users",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User findByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/findByName/TestPostman",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user",
+								"findByName",
+								"TestPostman"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ROUTINE",
+			"item": [
+				{
+					"name": "Get all routine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"routine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Routine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testRoutine\",\r\n    \"description\":\"test routine\",\r\n    \"purpose\":\"test purpouse\",\r\n    \"emailCoach\":\"testcoach@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"routine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Routine",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testRoutine02\",\r\n    \"description\":\"test routine02\",\r\n    \"purpose\":\"test purpouse02\",\r\n    \"emailCoach\":\"testcoach@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"routine",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Routine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"routine",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "COACH",
+			"item": [
+				{
+					"name": "Ger all Coaches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/coach/coaches",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"coach",
+								"coaches"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": []
+		}
+	]
+}
