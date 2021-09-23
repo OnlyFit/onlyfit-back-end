@@ -310,7 +310,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/",
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/614ccb7d7126c93f23ac8ea2",
 							"protocol": "https",
 							"host": [
 								"onlyfit-backend-staging",
@@ -320,7 +320,7 @@
 							"path": [
 								"v1",
 								"routine",
-								""
+								"614ccb7d7126c93f23ac8ea2"
 							]
 						}
 					},
@@ -338,7 +338,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/",
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/614ccb7d7126c93f23ac8ea2",
 							"protocol": "https",
 							"host": [
 								"onlyfit-backend-staging",
@@ -348,7 +348,7 @@
 							"path": [
 								"v1",
 								"routine",
-								""
+								"614ccb7d7126c93f23ac8ea2"
 							]
 						}
 					},
