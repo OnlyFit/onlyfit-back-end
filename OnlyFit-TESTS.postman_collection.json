@@ -12,7 +12,13 @@
 					"name": "GET Users",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user",
 							"protocol": "https",
@@ -33,7 +39,13 @@
 					"name": "User findById",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c0880a9f50a7b600fc934",
 							"protocol": "https",
@@ -55,10 +67,16 @@
 					"name": "Create User",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"TestPostman\",\r\n    \"lastName\":\"01\",\r\n    \"email\":\"testpostman@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"rol\":\"USER\"\r\n}",
+							"raw": "{\r\n    \"name\": \"TestPostman02\",\r\n    \"lastName\":\"02\",\r\n    \"email\":\"testpostman02@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"rol\":\"USER\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -85,10 +103,16 @@
 					"name": "Update User",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"TestPostman02\",\r\n    \"lastName\":\"02\",\r\n    \"email\":\"testpostman@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"rol\":\"USER\"\r\n}",
+							"raw": "{\r\n    \"name\": \"TestPostman02UPDATE\",\r\n    \"lastName\":\"02\",\r\n    \"email\":\"testpostman02@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"rol\":\"USER\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -96,7 +120,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c0880a9f50a7b600fc934",
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c5847d2f71f2b38ad54c2",
 							"protocol": "https",
 							"host": [
 								"onlyfit-backend-staging",
@@ -106,7 +130,7 @@
 							"path": [
 								"v1",
 								"user",
-								"614c0880a9f50a7b600fc934"
+								"614c5847d2f71f2b38ad54c2"
 							]
 						}
 					},
@@ -116,9 +140,15 @@
 					"name": "Delete User",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c0880a9f50a7b600fc934",
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/614c5847d2f71f2b38ad54c2",
 							"protocol": "https",
 							"host": [
 								"onlyfit-backend-staging",
@@ -128,17 +158,23 @@
 							"path": [
 								"v1",
 								"user",
-								"614c0880a9f50a7b600fc934"
+								"614c5847d2f71f2b38ad54c2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get all Coaches",
+					"name": "Get all athletes",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/users",
 							"protocol": "https",
@@ -160,7 +196,13 @@
 					"name": "User findByName",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/user/findByName/TestPostman",
 							"protocol": "https",
@@ -188,7 +230,13 @@
 					"name": "Get all routine",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine",
 							"protocol": "https",
@@ -209,7 +257,13 @@
 					"name": "Create Routine",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\":\"testRoutine\",\r\n    \"description\":\"test routine\",\r\n    \"purpose\":\"test purpouse\",\r\n    \"emailCoach\":\"testcoach@mail.com\"\r\n}",
@@ -239,7 +293,13 @@
 					"name": "Update Routine",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\":\"testRoutine02\",\r\n    \"description\":\"test routine02\",\r\n    \"purpose\":\"test purpouse02\",\r\n    \"emailCoach\":\"testcoach@mail.com\"\r\n}",
@@ -270,7 +330,13 @@
 					"name": "Delete Routine",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/routine/",
 							"protocol": "https",
@@ -297,7 +363,13 @@
 					"name": "Ger all Coaches",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMDg4MGE5ZjUwYTdiNjAwZmM5MzQiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzIzOTI5NjQsImV4cCI6MTYzMjQ3OTM2NH0.bKOH4VBgH9eTCon_Fx4haExqP2pvrQJs3c57lpBqImY",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/coach/coaches",
 							"protocol": "https",
@@ -319,7 +391,38 @@
 		},
 		{
 			"name": "AUTH",
-			"item": []
+			"item": [
+				{
+					"name": "AUTH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"testpostman@mail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlyfit-backend-staging.herokuapp.com/v1/auth",
+							"protocol": "https",
+							"host": [
+								"onlyfit-backend-staging",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
