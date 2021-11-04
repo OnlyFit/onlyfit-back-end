@@ -66,6 +66,12 @@ public class UserController
     public ArrayList<User> findByName(@PathVariable String name) {
         return userService.findByName(name);
     }
+
+    @GetMapping("/email")
+    @ResponseBody
+    public String getRoleByEmail(@RequestParam (name = "emailAddress", value = "emailAddress") String email) {
+        return userService.getRoleByEmail(email);
+    }
 }
 
 

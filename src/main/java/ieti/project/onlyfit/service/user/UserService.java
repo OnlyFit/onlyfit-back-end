@@ -28,4 +28,6 @@ public interface UserService
     User update( UserDto userDto, String id );
 
     List<User> allUsers();
+
+    String getRoleByEmail(String email);
 }
