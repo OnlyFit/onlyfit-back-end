@@ -127,5 +127,16 @@ public class UserServiceMongoDB
         return allCoaches;
     }
 
+    @Override
+    public String getRoleByEmail(String email) {
+        List<User> allUsers = userRepository.findAll();
 
+        for(User user: allUsers) {
+            if (user.getEmail().equals(email)) {
+                return user.getRoles().get(0).toString();
+            }
+        }
+
+        return "UserNotFound";
+    }
 }
