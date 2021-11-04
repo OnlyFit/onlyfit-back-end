@@ -19,6 +19,7 @@ import ieti.project.onlyfit.service.routine.RoutineService;
 import org.springframework.http.HttpStatus;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/v1/routine")
 public class RoutineController {
     
