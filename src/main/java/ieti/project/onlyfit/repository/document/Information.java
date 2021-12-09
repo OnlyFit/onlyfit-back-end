@@ -2,7 +2,7 @@ package ieti.project.onlyfit.repository.document;
 
 public class Information {
     private String address;
-    private String TipoDocumento;
+    private String tipoDocumento;
     private String documentNumber;
     private String numero;
     private String numeroEmergencia;
@@ -15,7 +15,7 @@ public class Information {
 
     public Information(String address, String tipoDocumento, String documentNumber, String numero, String numeroEmergencia, String rh, int weight, int height) {
         this.address = address;
-        TipoDocumento = tipoDocumento;
+        this.tipoDocumento = tipoDocumento;
         this.documentNumber = documentNumber;
         this.numero = numero;
         this.numeroEmergencia = numeroEmergencia;
@@ -33,11 +33,11 @@ public class Information {
     }
 
     public String getTipoDocumento() {
-        return TipoDocumento;
+        return tipoDocumento;
     }
 
     public void setTipoDocumento(String tipoDocumento) {
-        TipoDocumento = tipoDocumento;
+        this.tipoDocumento = tipoDocumento;
     }
 
     public String  getDocumentNumber() {
