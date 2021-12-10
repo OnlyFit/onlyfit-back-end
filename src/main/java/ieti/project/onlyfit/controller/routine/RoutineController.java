@@ -5,15 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ieti.project.onlyfit.repository.document.RoutineFit;
 import ieti.project.onlyfit.service.routine.RoutineService;
 import org.springframework.http.HttpStatus;
@@ -34,8 +26,9 @@ public class RoutineController {
         return ResponseEntity.ok(routineService.all());
     }
 
-    @GetMapping("/{email}")
-    public List<RoutineFit> getRoutineByCoachEmail(@PathVariable String email){
+    @GetMapping("/email")
+    @ResponseBody
+    public List<RoutineFit> getRoutineByCoachEmail(@RequestParam(name = "emailAddress", value = "emailAddress") String email){
         return routineService.findRoutineByCoachEmail(email);
     }
 

@@ -59,7 +59,8 @@ public class RoutineServiceMongoDB implements RoutineService{
 
     @Override
     public List<RoutineFit> findRoutineByCoachEmail(String email) {
-        List<RoutineFit> listRoutines = routineRepository.findByCoachEmail(email);
+        List<RoutineFit> listRoutines = routineRepository.findByEmailCoach(email);
+        System.out.println(listRoutines);
         return listRoutines;
     }
     

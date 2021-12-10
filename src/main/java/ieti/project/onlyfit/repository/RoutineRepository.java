@@ -7,6 +7,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface RoutineRepository extends MongoRepository<RoutineFit,String> {
 
-    @Query("{ 'emailCoach': ?0 }")
-    List<RoutineFit> findByCoachEmail(String email);
+    List<RoutineFit> findByEmailCoach (String email);
 }
