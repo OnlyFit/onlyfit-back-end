@@ -16,6 +16,8 @@ public class UserDto
 
     Information information;
 
+    boolean isPaid;
+
     public UserDto()
     {
     }
@@ -45,4 +47,13 @@ public class UserDto
     public Information getInformation() {return information;}
 
     public void setInformation(Information information) {this.information = information;}
+
+    public boolean isPaid() {
+        return isPaid;
+    }
+
+    public void setPaid(boolean paid) {
+        isPaid = paid;
+    }
+
 }

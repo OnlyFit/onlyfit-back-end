@@ -32,6 +32,8 @@ public class User
 
     Information information;
 
+    boolean isPaid;
+
     public User()
     {
     }
@@ -45,6 +47,7 @@ public class User
         roles = new ArrayList<>( Collections.singleton( RoleEnum.valueOf(userDto.getRol())) );
         passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
         information=userDto.getInformation();
+        isPaid= userDto.isPaid();
     }
 
     public String getId()
@@ -93,8 +96,9 @@ public class User
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
         this.email = userDto.getEmail();
+        this.isPaid= userDto.isPaid();
         if ( userDto.getPassword() != null ) {
-            this.passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
+            this.passwordHash = BCrypt.hashpw(userDto.getPassword(), BCrypt.gensalt());
         }
     }
 }
