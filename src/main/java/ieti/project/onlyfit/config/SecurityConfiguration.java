@@ -31,9 +31,12 @@ public class SecurityConfiguration
                 BasicAuthenticationFilter.class ).cors().and().csrf().disable().authorizeRequests()
                 .antMatchers( HttpMethod.POST,"/v1/user" ).permitAll()
                 .antMatchers( HttpMethod.GET, "/v1/user/email").permitAll()
+                .antMatchers( HttpMethod.GET, "/v1/user/routines").permitAll()
+                .antMatchers( HttpMethod.PUT, "/v1/user/routines").permitAll()
                 .antMatchers( HttpMethod.POST,"/v1/routine" ).permitAll()
                 .antMatchers( HttpMethod.GET,"/v1/routine" ).permitAll()
                 .antMatchers( HttpMethod.GET,"/v1/routine/email" ).permitAll()
+                .antMatchers( HttpMethod.GET,"/v1/routine/{id}" ).permitAll()
                 .antMatchers( HttpMethod.DELETE,"/v1/routine/{id}" ).permitAll()
                 .antMatchers( HttpMethod.POST, "/v1/auth" ).permitAll().anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(
                 SessionCreationPolicy.STATELESS );

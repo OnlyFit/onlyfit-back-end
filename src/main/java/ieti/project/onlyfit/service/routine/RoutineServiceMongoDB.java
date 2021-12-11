@@ -63,5 +63,10 @@ public class RoutineServiceMongoDB implements RoutineService{
         System.out.println(listRoutines);
         return listRoutines;
     }
-    
+
+    @Override
+    public RoutineFit getRoutineById(String id) {
+        return routineRepository.findRoutineFitById(id);
+    }
+
 }

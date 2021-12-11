@@ -8,4 +8,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 public interface RoutineRepository extends MongoRepository<RoutineFit,String> {
 
     List<RoutineFit> findByEmailCoach (String email);
+    RoutineFit findRoutineFitById (String id);
 }

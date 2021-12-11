@@ -46,4 +46,10 @@ public class RoutineController {
     public ResponseEntity<Boolean> delete(@PathVariable String id){
         return ResponseEntity.ok(routineService.deleteById(id));
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<RoutineFit> getRoutineById(@PathVariable String id){
+        return ResponseEntity.ok(routineService.getRoutineById(id));
+    }
+
 }

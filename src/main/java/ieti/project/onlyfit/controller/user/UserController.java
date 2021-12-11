@@ -77,6 +77,19 @@ public class UserController
     public String getRoleByEmail(@RequestParam (name = "emailAddress", value = "emailAddress") String email) {
         return userService.getRoleByEmail(email);
     }
+
+    @GetMapping("/routines")
+    @ResponseBody
+    public List<String> getRoutines(@RequestParam (name = "emailAddress", value = "emailAddress") String email) {
+        return userService.getRoutines(email);
+    }
+
+    @PutMapping("/routines")
+    public void updateRoutines(@RequestParam (name = "emailAddress", value = "emailAddress") String email, @RequestParam (name = "routine", value = "routine") String routine) {
+        userService.addRoutine(email,routine);
+    }
+
+
 }
 
 

@@ -30,4 +30,8 @@ public interface UserService
     List<User> allUsers();
 
     String getRoleByEmail(String email);
+
+    List<String> getRoutines(String email);
+
+    void addRoutine(String email, String routine);
 }

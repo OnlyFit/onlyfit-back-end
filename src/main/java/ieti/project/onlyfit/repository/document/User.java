@@ -32,6 +32,8 @@ public class User
 
     Information information;
 
+    List<String> routines;
+
     public User()
     {
     }
@@ -45,6 +47,7 @@ public class User
         roles = new ArrayList<>( Collections.singleton( RoleEnum.valueOf(userDto.getRol())) );
         passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
         information=userDto.getInformation();
+        routines = userDto.getRoutines();
     }
 
     public String getId()
@@ -89,6 +92,14 @@ public class User
         this.information = information;
     }
 
+    public List<String> getRoutines() {
+        return routines;
+    }
+
+    public void setRoutines(List<String> routines) {
+        this.routines = routines;
+    }
+
     public void update(UserDto userDto ) {
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
@@ -96,6 +107,7 @@ public class User
         if ( userDto.getPassword() != null ) {
             this.passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
         }
+        this.routines = userDto.getRoutines();
     }
 }
 

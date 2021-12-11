@@ -13,5 +13,6 @@ public interface RoutineService {
     boolean deleteById(String id);
     RoutineFit update(RoutineDto routineDto, String id);
     List<RoutineFit> findRoutineByCoachEmail(String email);
+    RoutineFit getRoutineById(String id);
     
 }
