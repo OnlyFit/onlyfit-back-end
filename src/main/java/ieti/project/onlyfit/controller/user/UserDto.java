@@ -20,11 +20,13 @@ public class UserDto
 
     List<String> routines;
 
+    boolean isPaid;
+
     public UserDto()
     {
     }
 
-    public UserDto(String name, String lastName, String email, String password, String rol, Information information, List<String> routines) {
+    public UserDto(String name, String lastName, String email, String password, String rol, Information information, List<String> routines, Boolean isPaid) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -32,6 +34,7 @@ public class UserDto
         this.rol = rol;
         this.information = information;
         this.routines = routines;
+        this.isPaid = isPaid;
     }
 
     public String getName()
@@ -67,4 +70,13 @@ public class UserDto
     public void setRoutines(List<String> routine) {
         this.routines = routine;
     }
+
+    public boolean isPaid() {
+        return isPaid;
+    }
+
+    public void setPaid(boolean paid) {
+        isPaid = paid;
+    }
+
 }

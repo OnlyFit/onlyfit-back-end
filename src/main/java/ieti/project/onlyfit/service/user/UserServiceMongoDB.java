@@ -105,10 +105,8 @@ public class UserServiceMongoDB
     public User update( UserDto userDto, String id )
     {
 
-        System.out.println("llego a update desde routines");
         if ( userRepository.findById( id ).isPresent() )
         {
-            System.out.println(userDto.getRoutines()+ " userDTO routines from update");
             User user = userRepository.findById( id ).get();
             user.update( userDto );
             userRepository.save( user );
@@ -166,11 +164,7 @@ public class UserServiceMongoDB
                 newRoutines = user.getRoutines();
                 newRoutines.add(routine);
                 UserDto newUser = new UserDto(user.getName(),user.getLastName(),user.getEmail(),
-                    user.getPasswordHash(),user.getRoles().get(0).toString(),user.getInformation(),newRoutines);
-                System.out.println("routines antes de update");
-                System.out.println(newUser.getName());
-                System.out.println(newUser.getRoutines().toString());
-                System.out.println(user.getId().toString());
+                    user.getPasswordHash(),user.getRoles().get(0).toString(),user.getInformation(),newRoutines, user.isPaid());
                 update(newUser, user.getId());
 
             }

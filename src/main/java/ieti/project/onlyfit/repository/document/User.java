@@ -32,7 +32,10 @@ public class User
 
     Information information;
 
+
     List<String> routines;
+
+    boolean isPaid;
 
     public User()
     {
@@ -48,6 +51,7 @@ public class User
         passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
         information=userDto.getInformation();
         routines = userDto.getRoutines();
+        isPaid= userDto.isPaid();
     }
 
     public String getId()
@@ -100,14 +104,24 @@ public class User
         this.routines = routines;
     }
 
+    public boolean isPaid() {
+        return isPaid;
+    }
+
+    public void setPaid(boolean paid) {
+        isPaid = paid;
+    }
+
     public void update(UserDto userDto ) {
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
         this.email = userDto.getEmail();
+        this.isPaid= userDto.isPaid();
         if ( userDto.getPassword() != null ) {
-            this.passwordHash = BCrypt.hashpw( userDto.getPassword(), BCrypt.gensalt() );
+            this.passwordHash = BCrypt.hashpw(userDto.getPassword(), BCrypt.gensalt());
         }
         this.routines = userDto.getRoutines();
+        this.isPaid = userDto.isPaid();
     }
 }
 
